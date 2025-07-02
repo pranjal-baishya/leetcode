@@ -1,18 +1,14 @@
+// 153. Find Minimum in Rotated Sorted Array
+// https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
+
 /*
 1. Set low = 0, high = nums.length - 1.
-
 2. While low < high:
-
   a. Calculate mid = Math.floor((low + high) / 2).
-
   b. If nums[mid] > nums[high]:
-
     . Minimum is in the right half → low = mid + 1
-
   c. Else:
-
     . Minimum is in the left half or at mid → high = mid
-
 3. When loop ends, low points to the minimum. 
 */
 
@@ -26,7 +22,7 @@ function findMin(nums) {
 
   while (l < r) {
     let mid = Math.floor((l + r) / 2)
-    
+
     if (nums[r] < nums[mid]) {
       l = mid + 1
     } else {

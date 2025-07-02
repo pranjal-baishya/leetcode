@@ -1,4 +1,8 @@
-/* Plan (Pseudocode)
+// 567. Permutation in String
+// https://leetcode.com/problems/permutation-in-string/
+
+/*
+pseudo code:
 1. If s1.length > s2.length, return false early.
 2. Create frequency counters for s1 and for the initial window of s2.
 3. Slide a window of size s1.length across s2, updating the window frequency count:
@@ -46,5 +50,5 @@ function checkInclusion(s1, s2) {
   return matches === 26
 }
 
-console.log(checkInclusion("ab", "eidbaooo")); // true
-console.log(checkInclusion("ab", "eidboaoo")); // false
+console.log(checkInclusion("ab", "eidbaooo")) // true
+console.log(checkInclusion("ab", "eidboaoo")) // false

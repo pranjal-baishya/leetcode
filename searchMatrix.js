@@ -1,27 +1,19 @@
-/*Let rows = m, cols = n.
+// 74. Search a 2D Matrix
+// https://leetcode.com/problems/search-a-2d-matrix/
 
-1. Initialize low = 0, high = m * n - 1.
-
-2. While low <= high:
-
- a. Compute mid = Math.floor((low + high) / 2)
-
- b. Convert 1D index mid to 2D:
-
-    row = Math.floor(mid / cols)
-
-    col = mid % cols
-
- c. Compare matrix[row][col] to target:
-
-    If equal → return true
-
-    If smaller → move low = mid + 1
-
-    If larger → move high = mid - 1
-
-3.Return false if not found.
-
+/*
+pseudo code:
+  1. Initialize two pointers, low and high.
+  2. While low <= high:
+    2.1 Compute mid = Math.floor((low + high) / 2).
+    2.2 Convert 1D index mid to 2D:
+       row = Math.floor(mid / cols)
+       col = mid % cols
+    2.3 Compare matrix[row][col] to target:
+       If equal → return true
+       If smaller → move low = mid + 1
+       If larger → move high = mid - 1  
+  3. Return false if not found.
 */
 
 /**
@@ -51,7 +43,7 @@ function searchMatrix(matrix, target) {
       l = mid + 1
     }
   }
-  
+
   return false
 }
 

@@ -1,3 +1,17 @@
+// 704. Binary Search
+// https://leetcode.com/problems/binary-search/
+
+/*
+pseudo code:
+  1. Initialize two pointers, left and right, to the start and end of the array.
+  2. While left is less than or equal to right:
+    2.1 Calculate the middle index.
+    2.2 If the middle element is equal to the target, return the middle index.
+    2.3 If the middle element is greater than the target, move the right pointer to the left of the middle.
+    2.4 If the middle element is less than the target, move the left pointer to the right of the middle.
+  3. If the target is not found, return -1.
+*/
+
 /**
  * @param {number[]} nums
  * @param {number} target

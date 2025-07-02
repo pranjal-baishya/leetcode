@@ -1,3 +1,6 @@
+// 92. Reverse Linked List II
+// https://leetcode.com/problems/reverse-linked-list-ii/
+
 /**
  * 1. Create a dummy node that points to the head of the list.
    - This helps handle edge cases like reversing from position 1.
@@ -43,7 +46,7 @@ function reverseBetween(head, left, right) {
     prev = prev.next
   }
   let curr = prev.next
-  for (let i = 0; i < right - left; i++) {  
+  for (let i = 0; i < right - left; i++) {
     let temp = curr.next
     curr.next = temp.next
     temp.next = prev.next

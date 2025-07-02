@@ -1,14 +1,17 @@
-/* 
-- Initialize a dummy node with a value of 0 and the first list as its next node.
-- Use a pointer `prev` to keep track of the last node in the merged list.
-- Compare the values of the current nodes in both lists:
-  - If the value of `list1` is less than `list2`, set `prev.next` to `list1` and move `list1` to the next node.
-  - Otherwise, set `prev.next` to `list2` and move `list2` to the next node.
-- Move `prev` to the next node in the merged list.
-- After the loop, `prev.next` will point to the remaining nodes in either `list1` or `list2`.
-- Return `dummy.next` as the head of the merged list.
-*/
+// 21. Merge Two Sorted Lists
+// https://leetcode.com/problems/merge-two-sorted-lists/
 
+/* 
+pseudo code:
+  1. Initialize a dummy node with a value of 0 and the first list as its next node.
+  2. Use a pointer `prev` to keep track of the last node in the merged list.
+  3. Compare the values of the current nodes in both lists:
+    3.1 If the value of `list1` is less than `list2`, set `prev.next` to `list1` and move `list1` to the next node.
+    3.2 Otherwise, set `prev.next` to `list2` and move `list2` to the next node.
+  4. Move `prev` to the next node in the merged list.
+  5. After the loop, `prev.next` will point to the remaining nodes in either `list1` or `list2`.
+  6. Return `dummy.next` as the head of the merged list.
+*/
 
 /**
  * Definition for singly-linked list.
